@@ -1,0 +1,7 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "mongoose": "^7.3.0"
+  }
+}
