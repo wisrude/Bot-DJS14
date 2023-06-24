@@ -25,7 +25,6 @@ module.exports = { //Exportamos
 
             if (interaction.options.getSubcommand() === 'sugerencias') { //Si la opción de la interacción es el subcomando de sugerencias realizará lo siguiente
                 let channel = interaction.options.getChannel("channel", true) // Definimos channel como la obtención de la opción definida en nuestro subcomando que obtendremos un canal por eso usamos getChannel y ponemos cual es el nombre de la opción del subcomando ha obtener y si es obligatorio u opcional usando true o false
-                if (channel !== ChannelType.Text) return interaction.reply({ content: 'Seleccione un canal de texto', ephemeral: true }) //Decimos si el canal obtenido no es de texto responda
                 data.suggestions = channel.id // Aqui hacemos que cree el objeto suggestions y lo defina como la ID del canal obtenido anteriormente
 
                 let suggestionsEmbed = new EmbedBuilder() //Definimos nuestro embed
