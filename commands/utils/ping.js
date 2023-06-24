@@ -10,7 +10,7 @@ module.exports = { //Exportamos nuestro slashcommand
         .setName('ping')//Nombre del comando
         .setDescription('Ping del bot'),//Descripción de nuestro comando
 
-    async execute(client, interaction) {// Usamos nuestra función asyncrona para más funciones
+    async run(client, interaction) {// Usamos nuestra función asyncrona para más funciones
         await interaction.reply({ content: `Ping: ${client.ws.ping} ms`, ephemeral: true })// Esperamos la interacción y se responderá un mensaje para unicamente el usuario que ejecuto el comando indicando el ping del bot
     }
 }
