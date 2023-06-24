@@ -15,7 +15,7 @@ module.exports = { //Exportamos
      * @param {ChatInputCommandInteraction} interaction //Nuestro parametro de la interacción
      */
 
-    async execute(client, interaction) { //Usamos nuestra función asyncrona
+    async run(client, interaction) { //Usamos nuestra función asyncrona
         try { //Hacemos que intente lo siguiente
             if (!interaction.member.permissions.has('ManageChannels')) return interaction.reply({ content: "Requieres de permisos de Editar Canales para ejecutar este comando", ephemeral: true }) //Si el usuario que interactúo no tiene permisos de Editar Canales responderá
             if (!interaction.guild.members.me.permissions.has('ManageChannels')) return interaction.reply({ content: "Requiero de permisos de Editar Canales para establecer el sistema", ephemeral: true }) //Si el bot no tiene permisos de Editar Canales responderá. Esto funciona de manera que en el servidor ejecutado se busca a él mismo entre los usuarios y comprueba si tiene el permiso citado
