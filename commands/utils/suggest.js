@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, Client, ChatInputCommandInteraction } = require('discord.js'); //Componentes de DJS
-const suggestions = require('../../models/server/setups') //Nuestro modelo creado
+const suggestions = require('../../models/setups') //Nuestro modelo creado
 
 module.exports = { //Exportamos
     data: new SlashCommandBuilder() //Creamos nuevo comando de barra
