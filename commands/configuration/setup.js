@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ChannelType } = require('discord.js'); //Componentes de DJS
-const setups = require('../../models/server/setups') //Definimos nuestra constante requiriendo nuestro modelo
+const setups = require('../models/server/setups') //Definimos nuestra constante requiriendo nuestro modelo
 
 module.exports = { //Exportamos
     data: new SlashCommandBuilder() //Creamos un nuevo comando de barra
