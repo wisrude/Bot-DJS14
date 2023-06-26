@@ -10,7 +10,7 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates
     ]
 });//Creamos un cliente con los intents necesarios
-const config = require('../config.json')//Requerimos nuestra configuración del bot
+const config = require('./config.json')//Requerimos nuestra configuración del bot
 
 // Database //
 mongoose.connect(config.mongoose).then(() => {//Conectamos la DataBase
