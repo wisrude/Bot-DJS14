@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, ChannelType } = require('discord.js'); //Componentes de DJS
+ticonst { SlashCommandBuilder, EmbedBuilder, ChannelType } = require('discord.js'); //Componentes de DJS
 const setups = require('../../models/setups') //Definimos nuestra constante requiriendo nuestro modelo
 
 module.exports = { //Exportamos
@@ -32,7 +32,7 @@ module.exports = { //Exportamos
                     .setDescription(`<:Canales:1054742504584519710> **Canal establecido:** [${channel}]\n<:Corona:1054740007186866286> **Autor:** [<@${interaction.user.id}>]`) //Descripción del embed
                     .setColor("#ffffff") //Color del embed
 
-                await setups.findOneAndUpdate({ guild: int.guild.id }, data) //Finalmente hacemos que de nuestro modelo definido en el principio obtenga y actualice nuestros objetos guild añadiendo lo definido como data que es igual a la ID del canal que hemos obtenido
+                await setups.findOneAndUpdate({ guild: interaction.guild.id }, data) //Finalmente hacemos que de nuestro modelo definido en el principio obtenga y actualice nuestros objetos guild añadiendo lo definido como data que es igual a la ID del canal que hemos obtenido
                 await interaction.reply({ embeds: [suggestionsEmbed] }) //Respondemos la interacción confirmando finalmente que no hubo errores
             }
         } catch (error) { //En caso de error lo capturamos
