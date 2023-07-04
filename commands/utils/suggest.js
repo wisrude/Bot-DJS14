@@ -12,7 +12,7 @@ module.exports = { //Exportamos
      * @param {ChatInputCommandInteraction} interaction //Parametro de nuestra interaccion
      */
 
-    async run(client, interaction) { //Función asyncrona
+    async execute(client, interaction) { //Función asyncrona
         if (!interaction.guild.members.me.permissions.has('EmbedLinks')) return interaction.reply({ content: 'No puedo enviar mensaje en el canal de sugerencias.', ephemeral: true }); //Si el bot no tiene permisos para enviar mensajes embeds responderá
 
         try { //Hacemos que intente lo siguiente
